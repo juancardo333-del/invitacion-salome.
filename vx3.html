@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XV Años Salomé</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  min-height:100vh;
+  background: radial-gradient(circle at top, #f6e7dc, #e9cfc0),
+              linear-gradient(135deg, #e8cfc4, #f3e1d8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Playfair Display', serif;
+  padding:30px 10px;
+}
+.container{
+  width:100%;
+  max-width:430px;
+}
+.parchment{
+  background: linear-gradient(to bottom,#f8f1e4,#f2e6d2,#eadcc4);
+  border-radius:14px;
+  padding:60px 28px 40px;
+  box-shadow: inset 0 0 25px rgba(160,120,70,0.35),
+              0 18px 40px rgba(0,0,0,0.25);
+  transform-origin: top;
+  animation: openScroll 2.4s ease forwards;
+  overflow:visible;
+}
+@keyframes openScroll{
+  0%{transform:scaleY(0);opacity:0;}
+  100%{transform:scaleY(1);opacity:1;}
+}
+.content{
+  text-align:center;
+  color:#5b3b3b;
+  animation:fadeIn 1.5s ease forwards;
+  animation-delay:2.2s;
+  opacity:0;
+}
+@keyframes fadeIn{to{opacity:1;}}
+
+.intro{
+  font-size:18px;
+  font-style:italic;
+  margin-bottom:26px;
+}
+.title{
+  font-family:'Great Vibes', cursive;
+  font-size:52px;
+  color:#7a4a4a;
+  margin:10px 0 18px;
+}
+.subtitle{
+  font-size:22px;
+  letter-spacing:2px;
+  margin-bottom:26px;
+}
+.name{
+  font-family:'Great Vibes', cursive;
+  font-size:46px;
+  color:#6b3f3f;
+  margin-bottom:30px;
+}
+.details{
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:20px;
+}
+
+/* --- Estilos del Contador --- */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+.time-box {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 65px;
+  border: 1px solid rgba(176, 141, 87, 0.3);
+}
+.time-num {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #7a4a4a;
+}
+.time-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8c6d6d;
+}
+/* ---------------------------- */
+
+.icons{
+  font-size:17px;
+  margin-bottom:26px;
+}
+.rsvp-btn{
+  display:inline-block;
+  margin:20px auto 10px;
+  padding:14px 38px;
+  font-size:20px;
+  letter-spacing:1.4px;
+  text-decoration:none;
+  color:#5b3b3b;
+  border:1.8px solid #b08d57;
+  border-radius:40px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.6), rgba(244,234,211,0.9));
+  box-shadow:0 8px 20px rgba(176,141,87,0.25);
+  transition:all 0.3s ease;
+}
+.rsvp-btn:hover{
+  background:linear-gradient(135deg, #f3e7cf, #ead3b0);
+  transform:translateY(-2px);
+}
+.final-text{
+  font-size:17px;
+  line-height:1.8;
+  margin-top:30px;
+  margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="parchment">
+    <div class="content">
+
+      <p class="intro">
+        Hay momentos en la vida que se sueñan…<br>
+        y hoy quiero compartir uno de ellos contigo.
+      </p>
+
+      <div class="subtitle">Te invito a celebrar</div>
+
+      <div class="title">Mis Quince Años</div>
+
+      <div class="name">Salomé Echavarría Villegas</div>
+
+      <div class="details">
+        📅 07 de febrero de 2026<br>
+        🕖 7:00 p.m.<br>
+        📍 Diamond Eventos
+      </div>
+
+      <div class="countdown-container" id="timer">
+        <div class="time-box">
+          <span class="time-num" id="days">00</span>
+          <span class="time-label">Días</span>
+        </div>
+        <div class="time-box">
+          <span class="time-num" id="hours">00</span>
+          <span class="time-label">Horas</span>
+        </div>
+        <div class="time-box">
+          <span class="time-num" id="minutes">00</span>
+          <span class="time-label">Min</span>
+        </div>
+        <div class="time-box">
+          <span class="time-num" id="seconds">00</span>
+          <span class="time-label">Seg</span>
+        </div>
+      </div>
+
+      <div class="icons">
+        🎁 Lluvia de sobres<br>
+        👗 Código de vestimenta: Elegante negro
+      </div>
+
+      <a class="rsvp-btn"
+         href="https://wa.me/573108038234?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20años%20de%20Salomé"
+         target="_blank">
+         Confirmar asistencia
+      </a>
+
+      <p class="final-text">
+        Será una noche inolvidable y tu presencia hará este momento aún más especial.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function startCountdown() {
+  // Fecha objetivo: 07 de febrero de 2026 a las 19:00:00
+  const countDate = new Date('February 7, 2026 19:00:00').getTime();
+
+  const update = setInterval(() => {
+    const now = new Date().getTime();
+    const gap = countDate - now;
+
+    // Cálculos de tiempo
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
+
+    // Actualizar el HTML
+    document.getElementById('days').innerText = d > 0 ? d : 0;
+    document.getElementById('hours').innerText = h > 0 ? h : 0;
+    document.getElementById('minutes').innerText = m > 0 ? m : 0;
+    document.getElementById('seconds').innerText = s > 0 ? s : 0;
+
+    // Si la fecha llega a cero
+    if (gap < 0) {
+      clearInterval(update);
+      document.getElementById('timer').innerHTML = "<h3 style='color:#7a4a4a'>¡LLEGÓ EL DÍA!</h3>";
+    }
+  }, 1000);
+}
+
+// Iniciar contador
+startCountdown();
+</script>
+
+</body>
+</html>
